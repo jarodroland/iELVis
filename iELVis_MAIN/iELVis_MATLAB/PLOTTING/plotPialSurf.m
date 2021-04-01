@@ -500,9 +500,7 @@ try
         2,verbLevel);
     
     %% MAKE FIGURE/AXIS
-    if ~isempty(hFig),
-        figure(hFig);
-    else
+    if isempty(hFig)
         hFig=figure;
     end
     if universalYes(clearFig),
@@ -511,9 +509,7 @@ try
     if ~isempty(backgroundColor)
         set(hFig,'color',backgroundColor);
     end
-    if ~isempty(hAx),
-        axes(hAx);
-    else
+    if isempty(hAx)
         hAx=gca;
     end
     
@@ -1095,10 +1091,8 @@ if ~isempty(pialOverlay),
 end
 
 % Create figure
-if isempty(hFig),
+if isempty(hFig)
     hFig=figure; clf;
-else
-    figure(hFig); clf;
 end
 set(hFig,'MenuBar','none','position',[100 190 1000 600],'paperpositionmode','auto');
 
@@ -1283,10 +1277,8 @@ clear global elecCbarMin elecCbarMax olayCbarMin olayCbarMax cort;
 
 hem=cfg.view(1);
 
-if isempty(hFig),
+if isempty(hFig)
     hFig=figure; clf;
-else
-    figure(hFig); clf;
 end
 set(hFig,'MenuBar','none','position',[100 190 800 500],'paperpositionmode','auto');
 
