@@ -129,7 +129,8 @@ if strcmpi(elecInfoType,'BIDS-iEEG'),
     % Get electrode information from iEEG-BIDs directory and transform
     % coordinates to be compatible with those in mgrid files
     %/Users/davidgroppe/Desktop/HandMotor/sub-PT001/ieeg/sub-PT001_ses-01_space-inf_electrodes.tsv
-    coordFname=fullfile(bidsDir,['sub-' fsSub],'ieeg',sprintf('sub-%s_ses-%.2d_space-postimplant_electrodes.tsv',fsSub,bidsSes));
+%     coordFname=fullfile(bidsDir,['sub-' fsSub],'ieeg',sprintf('sub-%s_ses-%.2d_space-postimplant_electrodes.tsv',fsSub,bidsSes));
+    coordFname=fullfile(bidsDir,['sub-' fsSub],'ieeg',sprintf('sub-%s_space-postimplant_electrodes.tsv',fsSub));
     fprintf('Taking electrode info from %s.\n',coordFname);
     
     %% Collect electrode coordinates

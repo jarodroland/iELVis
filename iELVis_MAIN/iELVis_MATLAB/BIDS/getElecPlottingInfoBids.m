@@ -25,7 +25,8 @@ end
 % 'inf'
 coordType=lower(coordType);
 %/Users/davidgroppe/Desktop/HandMotor/sub-PT001/ieeg/sub-PT001_ses-01_space-inf_electrodes.tsv
-coordFname=fullfile(bidsDir,['sub-' fsSub],'ieeg',sprintf('sub-%s_ses-%.2d_space-%s_electrodes.tsv',fsSub,bidsSes,coordType));
+% coordFname=fullfile(bidsDir,['sub-' fsSub],'ieeg',sprintf('sub-%s_ses-%.2d_space-%s_electrodes.tsv',fsSub,bidsSes,coordType));
+coordFname=fullfile(bidsDir,['sub-' fsSub],'ieeg',sprintf('sub-%s_space-%s_electrodes.tsv',fsSub,coordType));
 fprintf('Taking electrode info from %s. Use cfg.eleccord=''n''; if not wanted.\n',coordFname);
 
 %% Collect electrode coordinates
